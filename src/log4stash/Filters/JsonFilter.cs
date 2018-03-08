@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using log4stash.Extensions;
-using log4stash.SmartFormatters;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.Extensions;
+using BMX.Infra.log4stash.SmartFormatters;
 using Newtonsoft.Json.Linq;
 
-namespace log4stash.Filters
+namespace BMX.Infra.log4stash.Filters
 {
     public class JsonFilter : IElasticAppenderFilter
     {

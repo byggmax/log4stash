@@ -1,8 +1,8 @@
-﻿using log4stash.SmartFormatters;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using BMX.Infra.log4stash.SmartFormatters;
 
-namespace log4stash.Configuration
+namespace BMX.Infra.log4stash.Configuration
 {
     public class IndexOperationParamsDictionary
     {

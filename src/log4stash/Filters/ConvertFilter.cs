@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.SmartFormatters;
 using log4net.Util;
-using log4stash.SmartFormatters;
 
-namespace log4stash.Filters
+namespace BMX.Infra.log4stash.Filters
 {
     /// <summary>
     /// Convert Filter

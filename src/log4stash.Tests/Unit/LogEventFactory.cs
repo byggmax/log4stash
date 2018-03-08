@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BMX.Infra.log4stash.LogEventFactory;
 using log4net.Core;
-using log4stash.LogEventFactory;
 using log4net.Repository.Hierarchy;
 using NUnit.Framework;
 

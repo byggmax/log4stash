@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using BMX.Infra.log4stash.ElasticClient;
 
-namespace log4stash
+namespace BMX.Infra.log4stash
 {
     public interface IElasticAppenderFilter 
     {

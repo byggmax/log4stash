@@ -1,5 +1,6 @@
-using log4stash.Authentication;
-using log4stash.Configuration;
+using BMX.Infra.log4stash.Authentication;
+using BMX.Infra.log4stash.Configuration;
+using BMX.Infra.log4stash.ElasticClient;
 using NUnit.Framework;
 
 namespace log4stash.Tests.Unit

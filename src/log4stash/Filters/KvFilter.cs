@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using log4stash.Extensions;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.Extensions;
 
-namespace log4stash.Filters
+namespace BMX.Infra.log4stash.Filters
 {
     public class KvFilter : IElasticAppenderFilter
     {

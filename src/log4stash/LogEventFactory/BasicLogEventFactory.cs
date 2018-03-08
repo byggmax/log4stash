@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using BMX.Infra.log4stash.Extensions;
 using log4net.Core;
-using log4net.Util;
-using log4stash.Extensions;
 
-namespace log4stash.LogEventFactory
+namespace BMX.Infra.log4stash.LogEventFactory
 {
     public class BasicLogEventFactory : ILogEventFactory
     {

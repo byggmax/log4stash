@@ -3,7 +3,7 @@ using System.Text;
 using RestSharp;
 using RestSharp.Authenticators;
 
-namespace log4stash.Authentication
+namespace BMX.Infra.log4stash.Authentication
 {
     public class BasicAuthenticationMethod : IAuthenticator
     {

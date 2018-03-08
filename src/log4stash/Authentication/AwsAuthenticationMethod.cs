@@ -6,7 +6,7 @@ using log4stash.Authentication.Aws;
 using RestSharp;
 using RestSharp.Authenticators;
 
-namespace log4stash.Authentication
+namespace BMX.Infra.log4stash.Authentication
 {
     public class AwsAuthenticationMethod : IAuthenticator
     {
