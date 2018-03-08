@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading;
-using log4stash.LogEventFactory;
-using log4stash.SmartFormatters;
-using log4net.Util;
+using BMX.Infra.log4stash.Authentication;
+using BMX.Infra.log4stash.Configuration;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.LogEventFactory;
+using BMX.Infra.log4stash.SmartFormatters;
 using log4net.Appender;
 using log4net.Core;
-using log4stash.Authentication;
-using log4stash.Configuration;
+using log4net.Util;
 
-namespace log4stash
+namespace BMX.Infra.log4stash
 {
     public class ElasticSearchAppender : AppenderSkeleton, ILogEventFactoryParams
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace log4stash.LogEventFactory
+namespace BMX.Infra.log4stash.LogEventFactory
 {
     /// <summary>
     /// JsonSerializableException.

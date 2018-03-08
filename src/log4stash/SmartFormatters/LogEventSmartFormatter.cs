@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace log4stash.SmartFormatters
+namespace BMX.Infra.log4stash.SmartFormatters
 {
     /// <summary>
     /// A SmartFormatter that replace all the keys in the input using the LogEvent.

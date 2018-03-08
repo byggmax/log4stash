@@ -1,9 +1,8 @@
-using System.Diagnostics;
 using System.IO;
 using log4net.Core;
 using log4net.Util;
 
-namespace log4stash
+namespace BMX.Infra.log4stash
 {
     public class TemplateInfo : IOptionHandler
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace log4stash.Authentication.Aws
+namespace BMX.Infra.log4stash.Authentication.Aws
 {
     /// <summary>
     /// Sample AWS4 signer demonstrating how to sign requests to Amazon S3

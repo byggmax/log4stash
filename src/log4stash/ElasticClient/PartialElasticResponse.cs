@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace log4stash
+namespace BMX.Infra.log4stash.ElasticClient
 {
     internal sealed class PartialElasticResponse
     {

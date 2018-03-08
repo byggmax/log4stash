@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace log4stash.InnerExceptions
+namespace BMX.Infra.log4stash.InnerExceptions
 {
     public class InvalidFilterConfigurationException : Exception
     {

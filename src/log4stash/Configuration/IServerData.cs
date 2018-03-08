@@ -1,4 +1,4 @@
-﻿namespace log4stash.Configuration
+﻿namespace BMX.Infra.log4stash.Configuration
 {
     public interface IServerData
     {

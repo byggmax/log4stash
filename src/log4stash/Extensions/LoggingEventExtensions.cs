@@ -1,8 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace log4stash.Extensions
+namespace BMX.Infra.log4stash.Extensions
 {
     public static class LoggingEventExtensions
     {

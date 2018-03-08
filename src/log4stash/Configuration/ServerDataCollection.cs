@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace log4stash.Configuration
+namespace BMX.Infra.log4stash.Configuration
 {
     public class ServerDataCollection : IList<IServerData>
     {

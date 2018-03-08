@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using log4stash.Filters;
-using log4stash.InnerExceptions;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.Filters;
+using BMX.Infra.log4stash.InnerExceptions;
 
-namespace log4stash
+namespace BMX.Infra.log4stash
 {
     public class ElasticAppenderFilters : IElasticAppenderFilter
     {

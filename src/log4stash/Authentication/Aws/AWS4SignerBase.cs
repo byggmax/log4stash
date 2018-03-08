@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace log4stash.Authentication.Aws
+namespace BMX.Infra.log4stash.Authentication.Aws
 {
     /// <summary>
     /// Common methods and properties for all AWS4 signer variants

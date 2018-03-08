@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using log4stash.Authentication.Aws;
+using BMX.Infra.log4stash.Authentication.Aws;
 
-namespace log4stash.Authentication
+namespace BMX.Infra.log4stash.Authentication
 {
     public class AwsAuthenticationMethod : IAuthenticationMethod
     {

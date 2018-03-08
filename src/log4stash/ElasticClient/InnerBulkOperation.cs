@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using log4stash.Configuration;
 
-namespace log4stash
+namespace BMX.Infra.log4stash.ElasticClient
 {
     public class InnerBulkOperation 
     {

@@ -1,4 +1,4 @@
-﻿namespace log4stash.Authentication
+﻿namespace BMX.Infra.log4stash.Authentication
 {
     public class AuthenticationMethodChooser : IAuthenticationMethod
     {

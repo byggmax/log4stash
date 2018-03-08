@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Xml;
-using log4stash.Extensions;
-using log4stash.SmartFormatters;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.Extensions;
+using BMX.Infra.log4stash.SmartFormatters;
 using Newtonsoft.Json;
 
-namespace log4stash.Filters
+namespace BMX.Infra.log4stash.Filters
 {
     public class XmlFilter : IElasticAppenderFilter
     {

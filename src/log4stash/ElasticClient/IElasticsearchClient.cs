@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using log4stash.Authentication;
-using log4stash.Configuration;
+using BMX.Infra.log4stash.Authentication;
+using BMX.Infra.log4stash.Configuration;
 
-namespace log4stash
+namespace BMX.Infra.log4stash.ElasticClient
 {
     public interface IElasticsearchClient : IDisposable
     {

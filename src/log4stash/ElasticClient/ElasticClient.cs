@@ -6,12 +6,12 @@ using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using BMX.Infra.log4stash.Authentication;
+using BMX.Infra.log4stash.Configuration;
 using log4net.Util;
-using log4stash.Authentication;
-using log4stash.Configuration;
 using Newtonsoft.Json;
 
-namespace log4stash
+namespace BMX.Infra.log4stash.ElasticClient
 {
     public abstract class AbstractWebElasticClient : IElasticsearchClient
     {
