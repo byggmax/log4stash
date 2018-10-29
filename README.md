@@ -8,7 +8,7 @@ log4stash provide few logging filters similar to the filters on [logstash](http:
 The origin of log4stash is [@jptoto](https://github.com/jptoto)'s [log4net.ElasticSearch](https://github.com/jptoto/log4net.ElasticSearch) repository.
 
 ### Features:
-* Supports .NET 3.5+
+* Supports .NET 4.0+ and .NET Core
 * Easy installation and setup via [Nuget](https://nuget.org/packages/log4stash/)
 * Ability to analyze the log event before sending it to elasticsearch using built-in filters and custom filters similar to [logstash](http://logstash.net/docs/1.4.2/).
 
@@ -65,6 +65,10 @@ You can also set any public property in the appender/filter which didn't appear 
     <BulkIdleTimeout>10000</BulkIdleTimeout>
     <IndexAsync>False</IndexAsync>
     <DocumentIdSource>IdSource</DocumentIdSource> <!-- obsolete! use IndexOperationParams -->
+    
+    <!-- Serialize log object as json (default is true).
+      -- This in case you log the object this way: `logger.Debug(obj);` and not: `logger.Debug("string");` -->
+    <SerializeObjects>True</SerializeObjects> 
 
     <!-- optional: elasticsearch timeout for the request, default = 10000 -->
     <ElasticSearchTimeout>10000</ElasticSearchTimeout>

@@ -13,6 +13,6 @@ namespace BMX.Infra.log4stash.ElasticClient
         AuthenticationMethodChooser AuthenticationMethod { get; set; }
         void PutTemplateRaw(string templateName, string rawBody);
         void IndexBulk(IEnumerable<InnerBulkOperation> bulk);
-        IAsyncResult IndexBulkAsync(IEnumerable<InnerBulkOperation> bulk);
+        void IndexBulkAsync(IEnumerable<InnerBulkOperation> bulk);
     }
 }

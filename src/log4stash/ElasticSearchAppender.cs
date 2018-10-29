@@ -5,11 +5,13 @@ using System.Threading;
 using BMX.Infra.log4stash.Authentication;
 using BMX.Infra.log4stash.Configuration;
 using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.Extensions;
 using BMX.Infra.log4stash.LogEventFactory;
 using BMX.Infra.log4stash.SmartFormatters;
 using log4net.Appender;
 using log4net.Core;
 using log4net.Util;
+using log4stash;
 
 namespace BMX.Infra.log4stash
 {
@@ -19,6 +21,7 @@ namespace BMX.Infra.log4stash
         private IElasticsearchClient _client;
         private LogEventSmartFormatter _indexName;
         private LogEventSmartFormatter _indexType;
+        private TolerateCallsBase _tolerateCalls;
 
         private readonly Timer _timer;
 
@@ -39,6 +42,14 @@ namespace BMX.Infra.log4stash
         public int BulkIdleTimeout { get; set; }
         public int TimeoutToWaitForTimer { get; set; }
 
+        public int TolerateLogLogInSec
+        {
+            set
+            {
+                _tolerateCalls = TolerateCallsFactory.Create(value);
+            }
+        }
+
         // elastic configuration
         public string Server { get; set; }
         public int Port { get; set; }
@@ -52,6 +63,7 @@ namespace BMX.Infra.log4stash
         public TemplateInfo Template { get; set; }
         public ElasticAppenderFilters ElasticFilters { get; set; }
         public ILogEventFactory LogEventFactory { get; set; }
+        public bool DropEventsOverBulkLimit { get; set; }
         [Obsolete]
         public string BasicAuthUsername { get; set; }
         [Obsolete]
@@ -76,7 +88,10 @@ namespace BMX.Infra.log4stash
 
             BulkSize = 2000;
             BulkIdleTimeout = 5000;
+            DropEventsOverBulkLimit = false;
             TimeoutToWaitForTimer = 5000;
+
+            _tolerateCalls = new TolerateCallsBase();
 
             Servers = new ServerDataCollection();
             ElasticSearchTimeout = 10000;
@@ -162,10 +177,19 @@ namespace BMX.Infra.log4stash
                 return;
             }
 
+            if (DropEventsOverBulkLimit && _bulk.Count >= BulkSize)
+            {
+                _tolerateCalls.Call(() =>
+                    LogLog.Warn(GetType(),
+                        "Message lost due to bulk overflow! Set DropEventsOverBulkLimit to false in order to prevent that."),
+                    GetType(), 0);
+                return;
+            }
+
             var logEvent = LogEventFactory.CreateLogEvent(loggingEvent);
             PrepareAndAddToBulk(logEvent);
 
-            if (_bulk.Count >= BulkSize && BulkSize > 0)
+            if (!DropEventsOverBulkLimit && _bulk.Count >= BulkSize && BulkSize > 0)
             {
                 DoIndexNow();
             }

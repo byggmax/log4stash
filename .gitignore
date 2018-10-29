@@ -117,10 +117,17 @@ nCrunchTemp_*
 # MightyMoose
 *.mm.*
 AutoTest.Net/
+<<<<<<< HEAD
 
 # Web workbench (sass)
 .sass-cache/
 
+=======
+
+# Web workbench (sass)
+.sass-cache/
+
+>>>>>>> feature/fork-merge
 # Installshield output folder
 [Ee]xpress/
 
@@ -246,6 +253,10 @@ paket-files/
 
 # FAKE - F# Make
 .fake/
+
+src/\.vs/log4stash/v15/
+
+src/\.vs/
 
 # JetBrains Rider
 .idea/
