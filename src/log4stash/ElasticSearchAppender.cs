@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using BMX.Infra.log4stash.Authentication;
+using BMX.Infra.log4stash.Configuration;
+using BMX.Infra.log4stash.ElasticClient;
+using BMX.Infra.log4stash.LogEventFactory;
+using BMX.Infra.log4stash.SmartFormatters;
 using log4stash.Extensions;
-using log4stash.LogEventFactory;
-using log4stash.SmartFormatters;
 using log4net.Appender;
 using log4net.Core;
 using log4net.Util;
+using log4stash;
 
 namespace BMX.Infra.log4stash
 {

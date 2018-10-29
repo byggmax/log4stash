@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using log4stash.Authentication;
 using log4stash.Configuration;
 using log4stash.Extensions;
 using Nest;

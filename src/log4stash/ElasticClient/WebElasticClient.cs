@@ -6,9 +6,10 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using BMX.Infra.log4stash.Authentication;
+using BMX.Infra.log4stash.Configuration;
+using BMX.Infra.log4stash.ElasticClient;
 using log4net.Util;
-using log4stash.Authentication;
-using log4stash.Configuration;
 using Newtonsoft.Json;
 using RestSharp;
 

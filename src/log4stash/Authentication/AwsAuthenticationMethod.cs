@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using log4stash.Authentication.Aws;
+using BMX.Infra.log4stash.Authentication.Aws;
 using RestSharp;
 using RestSharp.Authenticators;
 
